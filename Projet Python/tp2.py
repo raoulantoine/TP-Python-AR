@@ -24,15 +24,15 @@ for fruit in tabFruits:
 
 print("Sous-Total HT =", sousTotalHT, " €" )
 
-if sousTotalHT > 200:
-    prixAvecRemise = sousTotalHT * 0.95
-    print("Remise 5% =", sousTotalHT - prixAvecRemise," €")
-    print("Prix HT =", prixAvecRemise ," €")
-    sousTotalHT = prixAvecRemise
+if sousTotHT > 200:
+    prixAvecRemise = sousTotHT * 0.95
+    print("Remise 5% =", round((sousTotHT - prixAvecRemise),2)," €")
+    print("Prix HT =", round(prixAvecRemise,2) ," €")
+    sousTotHT = prixAvecRemise
 else: 
-    print("Total HT =", sousTotalHT, " €")
+    print("Total HT =", round(sousTotHT, 2), " €")
 
-print("TOTAL TTC =", sousTotalHT * tva," €")
+print("TOTAL TTC =", round((sousTotHT * tva),2)," €")
 
 
 
