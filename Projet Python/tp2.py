@@ -1,16 +1,28 @@
 #4.1. Utilisation de données structurées
 
-fruitbanane = {"nom":"banane", "Prix":4, "Quantité":2,"Total HT":8}
-fruitpomme = {"nom":"pomme", "Prix":2, "Quantité":1,"Total HT":2}
-fruitorange = {"nom":"orange", "Prix":1.5, "Quantité":1,"Total HT": 1.5}
-fruitpoire= {"nom":"poire", "Prix":3, "Quantité":5, "Total HT": 15}
-tableauFruit = [fruitbanane, fruitpomme, fruitpoire]
-print(tableauFruit)
+tabFruitUn = {"Nom":"Banane","Prix": 4,"Quantité": 2,"TotalHT":8}
+tabFruitDeux = {"Nom":"Pomme","Prix": 2,"Quantité": 1,"TotalHT":2}
+tabFruitTrois = {"Nom":"Orange","Prix": 1.5, "Quantité":3,"TotalHT":4.5}
+tabFruitQuatre = {"Nom":"Poire","Prix":3,"Quantité":5,"TotalHT":15}
+
+tabFruits = [tabFruitUn, tabFruitDeux, tabFruitQuatre]
+sousTotalHT = 0
+print(tabFruits)
+
+# nbIdProduit = int(input('Entrez l'identifiant du produit à afficher : '))
+
 try:
-    nbId = int(input('Entrez l ID du produit :'))
-    print(tableauFruit[nbId])
+    nbIdProduit = int(input('Entrez un identifiant de produit à afficher : '))
+    print(tabFruits[nbIdProduit])
 except IndexError:
-    print("L ID n'est pas présent dans le tableau")
+    print("Oops! Votre saisie est incorrecte")
+
+for fruit in tabFruits:
+                    sousTotalHT = sousTotalHT + fruit['TotalHT']
+                    # sousTotalHT =+ fruit['TotalHT']
+
+print("Sous Total HT = ", sousTotalHT)
+
 
 
 
