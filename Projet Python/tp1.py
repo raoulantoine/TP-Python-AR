@@ -5,14 +5,21 @@ prixHT = int(input('Entrez un prix hors taxe :'))
 quantite = int(input('Entrez une quantité :'))
 
 #calcul
+import sys
 prixHT = int(input('Entrez un prix hors taxe :'))
-quantite = int(input('Entrez une quantité '))
+if  prixHT<=0:
+    print('Désolé recommence')
+    sys.exit()
+quantite = int(input('Entrez une quantité :'))
+if quantite<=0:
+    print('Désolé recommence')
+    sys.exit()
 calculTVA = (prixHT * quantite) * 1.2
 if calculTVA > 200:
     remise = calculTVA * 0.95
-    print("la remise est de " + remise)
+    print("Le prix TTC avec remise", remise)
 else :
-    print("le prix sans remise est de " + calculTVA)
+    print("Le prix TTC sans remise", calculTVA)
 
 #3.2 Gestion de plusieurs produits
 
