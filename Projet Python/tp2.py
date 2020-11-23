@@ -1,12 +1,13 @@
 #4.1. Utilisation de données structurées
 
-tabFruitUn = {"Nom":"Banane","Prix": 4,"Quantité": 2,"TotalHT":8}
-tabFruitDeux = {"Nom":"Pomme","Prix": 2,"Quantité": 1,"TotalHT":2}
+tabFruitUn = {"Nom":"Banane","Prix": 4,"Quantité": 20,"TotalHT":80}
+tabFruitDeux = {"Nom":"Pomme","Prix": 2,"Quantité": 10,"TotalHT":20}
 tabFruitTrois = {"Nom":"Orange","Prix": 1.5, "Quantité":3,"TotalHT":4.5}
-tabFruitQuatre = {"Nom":"Poire","Prix":3,"Quantité":5,"TotalHT":15}
+tabFruitQuatre = {"Nom":"Poire","Prix":3,"Quantité":50,"TotalHT":150}
 
 tabFruits = [tabFruitUn, tabFruitDeux, tabFruitQuatre]
 sousTotalHT = 0
+tva = 1.2
 print(tabFruits)
 
 # nbIdProduit = int(input('Entrez l'identifiant du produit à afficher : '))
@@ -21,9 +22,17 @@ for fruit in tabFruits:
                     sousTotalHT = sousTotalHT + fruit['TotalHT']
                     # sousTotalHT =+ fruit['TotalHT']
 
-print("Sous Total HT = ", sousTotalHT)
+print("Sous-Total HT =", sousTotalHT, " €" )
 
+if sousTotalHT > 200:
+    prixAvecRemise = sousTotalHT * 0.95
+    print("Remise 5% =", sousTotalHT - prixAvecRemise," €")
+    print("Prix HT =", prixAvecRemise ," €")
+    sousTotalHT = prixAvecRemise
+else: 
+    print("Total HT =", sousTotalHT, " €")
 
+print("TOTAL TTC =", sousTotalHT * tva," €")
 
 
 
