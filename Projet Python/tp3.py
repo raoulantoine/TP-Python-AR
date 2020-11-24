@@ -13,8 +13,6 @@ sousTotalHT = 0
 tva = 1.2
 print(tabFruits)
 
-# nbIdProduit = int(input('Entrez l'identifiant du produit à afficher : '))
-
 try:
     nbIdProduit = int(input('Entrez un identifiant de produit à afficher : '))
     print(tabFruits[nbIdProduit])
@@ -27,7 +25,5 @@ print("Sous-Total HT =", round(sousTotalHT,2), " €" )
 
 if sousTotalHT > 200:
     sousTotalHT = c.appliquerUneRemise(sousTotalHT)
-else: 
-    print("Total HT =", round(sousTotalHT,2), " €")
 
 print("TOTAL TTC =", round(c.appliquerTVA(sousTotalHT),2)," €")
