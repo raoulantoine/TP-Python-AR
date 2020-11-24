@@ -38,29 +38,28 @@ print("TOTAL TTC =", round((sousTotHT * tva),2)," €")
 
 #4.2. Structuration de votre programme
 
-class Caisse (object):
+# class Caisse (object):
 
-    def calculTVA (self):
-        self.prixTVA = prixHT * 1.2
-        return self.prixTVA
-    def calculRemise (self):
-        self.prixRemise = prix * 0.95
-        return self.prixRemise
-
-
-
-class Produit(object):
-    def init (self):
-        self.tabbanane = {"nom":"banane", "Prix":4, "Quantité":2,"Total HT":80}
-        self.tabpomme = {"nom":"pomme", "Prix":2, "Quantité":1,"Total HT":20}
-        self.taborange = {"nom":"orange", "Prix":1.5, "Quantité":1,"Total HT": 1.5}
-        self.tabpoire= {"nom":"poire", "Prix":3, "Quantité":5, "Total HT": 150}
-        self.tableauFruit = [self.tabbanane, self.tabpomme, self.tabpoire]
-
-    def _get_tableauFruit(self):
-        return self.tableauFruit
+#     def calculTVA (self):
+#         self.prixTVA = prixHT * 1.2
+#         return self.prixTVA
+#     def calculRemise (self):
+#         self.prixRemise = prix * 0.95
+#         return self.prixRemise
 
 
-tableauFruit = Produit()
-tableauFruit._get_tableauFruit
-print(tableauFruit)
+# class Produit(object):
+#     def init (self):
+#         self.tabbanane = {"nom":"banane", "Prix":4, "Quantité":2,"Total HT":80}
+#         self.tabpomme = {"nom":"pomme", "Prix":2, "Quantité":1,"Total HT":20}
+#         self.taborange = {"nom":"orange", "Prix":1.5, "Quantité":1,"Total HT": 1.5}
+#         self.tabpoire= {"nom":"poire", "Prix":3, "Quantité":5, "Total HT": 150}
+#         self.tableauFruit = [self.tabbanane, self.tabpomme, self.tabpoire]
+
+#     def _get_tableauFruit(self):
+#         return self.tableauFruit
+
+
+# tableauFruit = Produit()
+# tableauFruit._get_tableauFruit
+# print(tableauFruit)
