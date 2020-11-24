@@ -5,6 +5,7 @@ tabFruitDeux = {"Nom":"Pomme","Prix": 2,"Quantité": 10,"TotalHT":20}
 tabFruitTrois = {"Nom":"Orange","Prix": 1.5, "Quantité":3,"TotalHT":4.5}
 tabFruitQuatre = {"Nom":"Poire","Prix":3,"Quantité":50,"TotalHT":150}
 
+
 tabFruits = [tabFruitUn, tabFruitDeux, tabFruitQuatre]
 sousTotalHT = 0
 tva = 1.2
@@ -35,5 +36,25 @@ else:
 print("TOTAL TTC =", round((sousTotHT * tva),2)," €")
 
 
+#4.2. Structuration de votre programme
 
 
+
+class Caisse (object):
+    def calculTVA (self):
+        prixTVA = prixHT * 1.2
+        return prixTVA
+    def calculRemise (self):
+        prixRemise = prix * 0.95
+        return prixRemise
+
+class Produit(object):
+    def  init  (self):
+        self.tabbanane = {"nom":"banane", "Prix":4, "Quantité":2,"Total HT":80}
+        self.tabpomme = {"nom":"pomme", "Prix":2, "Quantité":1,"Total HT":20}
+        self.taborange = {"nom":"orange", "Prix":1.5, "Quantité":1,"Total HT": 1.5}
+        self.tabpoire= {"nom":"poire", "Prix":3, "Quantité":5, "Total HT": 150}
+        self.tableauFruit = [tabbanane, tabpomme, tabpoire]
+
+    def _get_tableauFruit(self):
+        return self.tableauFruit
